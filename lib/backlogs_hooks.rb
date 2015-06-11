@@ -252,7 +252,7 @@ module BacklogsPlugin
 
           if User.current.allowed_to?(:edit_wiki_pages, project)
             snippet += '<span id="edit_wiki_page_action">'
-            snippet += link_to l(:button_edit_wiki), 
+            snippet += link_to l(:button_edit_wiki),
                       url_for_prefix_in_hooks + url_for({:controller => 'rb_wikis', :action => 'edit', :sprint_id => version.id }),
                       :class => 'icon icon-edit'
             snippet += '</span>'

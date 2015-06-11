@@ -1,6 +1,8 @@
 class RbStory < Issue
   unloadable
 
+  self.inheritance_column = nil
+
   RELEASE_RELATIONSHIP = %w(auto initial continued added)
 
   private

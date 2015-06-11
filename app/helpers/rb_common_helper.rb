@@ -264,7 +264,7 @@ filter:progid:DXImageTransform.Microsoft.Gradient(Enabled=1,GradientType=0,Start
   # Convert selected ids to integer and remove blank values.
   def selected_ids(options)
     return nil if options.nil?
-    options.collect{|o| o.to_i unless o.blank?}.compact! 
+    options.collect{|o| o.to_i unless o.blank?}.compact!
   end
 
   def format_release_sharing(v)
@@ -278,5 +278,12 @@ filter:progid:DXImageTransform.Microsoft.Gradient(Enabled=1,GradientType=0,Start
     else
       Redmine::Utils.relative_url_root #actionpack-3* is not???
     end
+  end
+
+  def rb_story_path *args
+    issue_path(*args)
+  end
+  def rb_task_path *args
+    issue_path(*args)
   end
 end

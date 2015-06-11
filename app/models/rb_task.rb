@@ -3,6 +3,8 @@ require 'date'
 class RbTask < Issue
   unloadable
 
+  self.inheritance_column = nil
+
   def self.tracker
     task_tracker = Backlogs.setting[:task_tracker]
     return nil if task_tracker.blank?
